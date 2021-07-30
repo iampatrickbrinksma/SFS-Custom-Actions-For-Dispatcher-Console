@@ -1,5 +1,5 @@
 /*************************************************************************************************************
- * @name			toggleInJeopardyForServiceAppointment
+ * @name			toggleInJeopardyWithReasonForSAsCtrl
  * @author			Patrick Brinksma
  * @created			30 / 07 / 2021
  * @description		Example custom action for the Salesforce Field Service Dispatcher Console. This example
