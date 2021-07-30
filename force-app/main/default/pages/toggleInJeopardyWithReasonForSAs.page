@@ -1,0 +1,24 @@
+<apex:page controller="toggleInJeopardyWithReasonForSAsCtrl" lightningStylesheets="true">
+    <script type="text/javascript">
+        // Close parent modal screen (part of FSL Managed Package)
+        // See https://developer.salesforce.com/docs/atlas.en-us.232.0.field_service_dev.meta/field_service_dev/fsl_dev_code_samples_dispatcher.htm
+        function closeParentLightBox(){
+            parent.postMessage('closeLightbox','*');
+        }
+    </script>
+    <apex:form>
+        <apex:pageBlock title="Toggle InJeopardy With Reason" tabStyle="ServiceAppointment" mode="edit">
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!saveSAs}" value="Save" rendered="{!!sasSaved}"/>
+                <apex:commandButton onclick="closeParentLightBox();return false;" value="Close" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Select reason" columns="2" rendered="{!!sasSaved}">
+                <apex:inputField value="{!sa.FSL__InJeopardyReason__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Success" columns="1" rendered="{!sasSaved}">
+                <apex:outputText>Changes saved!</apex:outputText>
+            </apex:pageBlockSection>         
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
