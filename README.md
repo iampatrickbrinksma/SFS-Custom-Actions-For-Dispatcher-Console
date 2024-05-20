@@ -8,6 +8,9 @@ The following examples are included:
 - Create a resource absence for one or more service resources
 - Edit a single existing resource absence
 
+## Disclaimer
+IMPORTANT: This code is not intended to be deployed directly to a Salesforce production environment, but to be used as an example. This is not a Salesforce product and is not officially supported by Salesforce.
+
 ## How To Use
 
 - Please review the help documentation on how to create custom actions: https://help.salesforce.com/articleView?id=sf.pfs_create_custom_actions.htm&type=5
